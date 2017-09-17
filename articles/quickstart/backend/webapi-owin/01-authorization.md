@@ -86,8 +86,8 @@ public void Configuration(IAppBuilder app)
 }
 ```
 
-::: panel-warning Do not forget the trailing backslash
-Please ensure that the URL specified for `ValidIssuer` contains a trailing backslash as this needs to match exactly with the issuer claim of the JWT. This is a common misconfiguration error which will cause your API calls to not be authenticated correctly.
+::: panel-warning Do not forget the trailing slash
+Please ensure that the URL specified for `ValidIssuer` contains a trailing slash as this needs to match exactly with the issuer claim of the JWT. This is a common misconfiguration error which will cause your API calls to not be authenticated correctly.
 :::
 
 The JWT middleware integrates with the standard ASP.NET Authentication and Authorization mechanisms, so you only need to decorate your controller action with the `[Authorize]` attribute to secure an endpoint:
